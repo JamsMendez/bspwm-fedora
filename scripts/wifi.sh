@@ -115,7 +115,7 @@ esac
 else
 	echo ""
 	echo -e "${Cyan} [i]${White} Install nmcli on your system!"
-	sudo apt install nmcli -y
+	sudo dnf install nmcli -y
 	sleep 2
 	echo ""
 	echo -e "${Cyan} [i]${White} Nmcli is installed, launch the script again!"

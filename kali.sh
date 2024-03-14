@@ -50,9 +50,9 @@ echo ""
 echo -e "${White} [${Blue}i${White}] Step 9 installing missing dependencies"
 sleep 2
 echo ""
-sudo apt install rofi fonts-firacode fonts-cantarell lxappearance nitrogen lsd betterlockscreen flameshot git net-tools xclip xdotool -y
+sudo dnf install rofi fonts-firacode fonts-cantarell lxappearance nitrogen lsd betterlockscreen flameshot git net-tools xclip xdotool -y
 echo ""
-sudo apt install scrub bat tty-clock openvpn feh pulseaudio-utils git lolcat -y
+sudo dnf install scrub bat tty-clock openvpn feh pulseaudio-utils git lolcat -y
 echo ""
 }
 
@@ -81,9 +81,9 @@ if [ $quest = Y ]; then
 		echo -e "${White} [${Red}-${White}] BSPWM is not installed, installing bspwm"
 		sleep 2
 		echo ""
-		sudo apt update
+		sudo dnf update
 		echo ""
-		sudo apt install bspwm -y
+		sudo dnf install bspwm -y
 		echo ""
 		echo -e "${White} [${Blue}+${White}] BSPWM is installed, installing configuration"
 		sleep 2
@@ -105,9 +105,9 @@ if [ $quest = Y ]; then
 		echo -e "${White} [${Red}-${White}] SXHKD is not installed, installing sxhkd"
 		sleep 2
 		echo ""
-		sudo apt update
+		sudo dnf update
 		echo ""
-		sudo apt install sxhkd -y
+		sudo dnf install sxhkd -y
 		echo ""
 		echo -e "${White} [${Blue}+${White}] SXHKD is installed, installing configuration"
 		sleep 2
@@ -145,9 +145,9 @@ if [ $quest = Y ]; then
 		echo -e "${White} [${Red}-${White}] KITTY is not installed, installing kitty"
 		sleep 2
 		echo ""
-		sudo apt update
+		sudo dnf update
 		echo ""
-		sudo apt install kitty -y
+		sudo dnf install kitty -y
 		echo ""
 		echo -e "${White} [${Blue}+${White}] KITTY is installed, installing configuration"
 		sleep 2
@@ -170,9 +170,9 @@ if [ $quest = Y ]; then
 		echo -e "${White} [${Red}-${White}] PICOM is not installed, installing picom compositor"
 		sleep 2
 		echo ""
-		sudo apt update
+		sudo dnf update
 		echo ""
-		sudo apt install picom -y
+		sudo dnf install picom -y
 		echo ""
 		echo -e "${White} [${Blue}+${White}] PICOM is installed, installing configuration"
 		sleep 2
@@ -195,9 +195,9 @@ if [ $quest = Y ]; then
 		echo -e "${White} [${Red}-${White}] NEOFETCH is not installed, installing neofetch"
 		sleep 2
 		echo ""
-		sudo apt update
+		sudo dnf update
 		echo ""
-		sudo apt install neofetch -y
+		sudo dnf install neofetch -y
 		echo ""
 		echo -e "${White} [${Blue}+${White}] NEOFETCH is installed, installing configuration"
 		sleep 2
@@ -220,34 +220,11 @@ if [ $quest = Y ]; then
 		echo -e "${White} [${Red}-${White}] RANGER is not installed, installing ranger"
 		sleep 2
 		echo ""
-		sudo apt update
+		sudo dnf update
 		echo ""
-		sudo apt install ranger -y
+		sudo dnf update
 		echo ""
-		echo -e "${White} [${Blue}+${White}] RANGER is installed, installing configuration"
-                sleep 2
-                cd ${RUTE}/.config
-                sudo rm -rf ${LOCALPATH}/.config/ranger
-                cp -r ranger ${LOCALPATH}/.config/ranger
-		echo ""
-		echo -e "${White} [${Blue}i${White}] Step 7 check if the cava is installed"
-                sleep 2
-	fi
-	if which cava >/dev/null; then
-		echo ""
-		echo -e "${White} [${Blue}+${White}] CAVA is installed, installing configuration"
-		sleep 2
-		cd ${RUTE}/.config
-		sudo rm -rf ${LOCALPATH}/.config/cava
-                cp -r cava ${LOCALPATH}/.config/cava
-	else
-		echo ""
-		echo -e "${White} [${Red}-${White}] CAVA is not installed, installing cava"
-		sleep 2
-		echo ""
-		sudo apt update
-		echo ""
-		sudo apt install cava -y
+		sudo dnf install cava -y
 		echo ""
 		echo -e "${White} [${Blue}+${White}] CAVA is installed, installing configuration"
 		sleep 2
@@ -283,9 +260,9 @@ if [ $quest = Y ]; then
 		echo -e "${White} [${Red}-${White}] POLYBAR is not installed, installing polybar"
 		sleep 2
 		echo ""
-		sudo apt update
+		sudo dnf update
 		echo ""
-		sudo apt install polybar -y
+		sudo dnf install polybar -y
 		echo ""
 		echo -e "${White} [${Blue}+${White}] POLYBAR is installed, installing configuration"
 		sleep 2

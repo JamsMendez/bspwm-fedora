@@ -43,7 +43,7 @@ update () {
 echo ""
 banner
 echo ""
-echo -e "${Blue} [${Yellow}⇅${Blue}]${White} Checking nala from-end apt"
+echo -e "${Blue} [${Yellow}⇅${Blue}]${White} Checking nala from-end dnf"
 if which nala >/dev/null; then
 	sleep 1
 	echo ""
@@ -93,8 +93,8 @@ esac
 else
 	echo ""
 	sleep 1
-	echo -e "${Blue}[${Cyan}i${Blue}]${White} Installing nala from-end apt"
-	sudo apt install nala -y
+	echo -e "${Blue}[${Cyan}i${Blue}]${White} Installing nala from-end dnf"
+	sudo dnf install nala -y
 	echo ""
 	echo -e "${Blue} [${Cyan}i${Blue}]${White} Nala is already installed, launch the script again!"
 	sleep 1
