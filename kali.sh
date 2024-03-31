@@ -41,7 +41,7 @@ echo ""
 echo -e "${White} [${Blue}i${White}] Installation will begin soon."
 echo ""
 sleep 4
-echo -e "${White} [${Blue}i${White}] Hello ${Red}${USERNAME}${White}, This is the bspwm installation script for kali linux"
+echo -e "${White} [${Blue}i${White}] Hello ${Red}${USERNAME}${White}, This is the bspwm installation script for Fedora"
 }
 
 # INSTALLATION OF MISSING DEPENDENCIES
@@ -50,9 +50,12 @@ echo ""
 echo -e "${White} [${Blue}i${White}] Step 9 installing missing dependencies"
 sleep 2
 echo ""
-sudo dnf install rofi fonts-firacode fonts-cantarell lxappearance nitrogen lsd betterlockscreen flameshot git net-tools xclip xdotool -y
+sudo dnf install xsetroot eza feh rofi fonts-firacode lxappearance nitrogen flameshot git net-tools xclip xdotool -y
 echo ""
-sudo dnf install scrub bat tty-clock openvpn feh pulseaudio-utils git lolcat -y
+sudo dnf install scrub bat openvpn feh pulseaudio-utils git lolcat -y
+echo ""
+# dependencies failed
+sudo dnf install lsd fonts-cantarell tty-clock betterlockscreen -y
 echo ""
 }
 
@@ -255,6 +258,7 @@ if [ $quest = Y ]; then
 		chmod +x ${LOCALPATH}/.config/polybar/cuts/scripts/style-switch.sh
 		chmod +x ${LOCALPATH}/.config/polybar/cuts/scripts/styles.sh
 		chmod +x ${LOCALPATH}/.config/polybar/cuts/scripts/updates.sh
+		chmod +x ${LOCALPATH}/.config/polybar/launch.sh
 	else
 		echo ""
 		echo -e "${White} [${Red}-${White}] POLYBAR is not installed, installing polybar"
@@ -269,8 +273,8 @@ if [ $quest = Y ]; then
 		cd ${RUTE}/.config
                 sudo rm -rf ${LOCALPATH}/.config/polybar
                 cp -r polybar ${LOCALPATH}/.config/polybar
-		chmod +x ${LOCALPATH}/.config/polybar/launch.sh
-		chmod +x ${LOCALPATH}/.config/polybar/cuts/scripts/checkupdates
+				chmod +x ${LOCALPATH}/.config/polybar/launch.sh
+				chmod +x ${LOCALPATH}/.config/polybar/cuts/scripts/checkupdates
                 chmod +x ${LOCALPATH}/.config/polybar/cuts/scripts/color-switch.sh
                 chmod +x ${LOCALPATH}/.config/polybar/cuts/scripts/colors-dark.sh
                 chmod +x ${LOCALPATH}/.config/polybar/cuts/scripts/colors-light.sh
