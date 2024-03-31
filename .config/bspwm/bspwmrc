@@ -27,7 +27,7 @@ bspc config gapless_monocle      true
 bspc config focus_follows_pointer true
 bspc config pointer_follows_focus true
 bspc config gapless_monocle true
-bspc config paddingless_monocle true
+#bspc config paddingless_monocle true
 
 bspc rule -a 'Gnome-terminal' state=floating rectangle=1000x600+150+150 center=true
 bspc rule -a 'Google-chrome' desktop='I'
@@ -38,7 +38,7 @@ bspc rule -a 'stacer' state=floating follow=on
 bspc rule -a 'org.gnome.Nautilus' state=floating follow=on
 bspc rule -a 'gnome-calculator' state=floating follow=on
 bspc rule -a 'Nitrogen' state=floating follow=on
-bspc rule -a 'Synaptic' state=floating follow=on
+#bspc rule -a 'Synaptic' state=floating follow=on
 
 # Auto-Start
 
