@@ -50,12 +50,12 @@ echo ""
 echo -e "${White} [${Blue}i${White}] Step 9 installing missing dependencies"
 sleep 2
 echo ""
-sudo dnf install xsetroot eza feh rofi fonts-firacode lxappearance nitrogen flameshot git net-tools xclip xdotool -y
+sudo dnf install xsetroot eza feh rofi lxappearance nitrogen flameshot git net-tools xclip xdotool lsd -y
 echo ""
-sudo dnf install scrub bat openvpn feh pulseaudio-utils git lolcat -y
+sudo dnf install scrub bat openvpn pulseaudio-utils lolcat -y
 echo ""
 # dependencies failed
-sudo dnf install lsd fonts-cantarell tty-clock betterlockscreen -y
+sudo dnf install fonts-firacode fonts-cantarell tty-clock betterlockscreen -y
 echo ""
 }
 
