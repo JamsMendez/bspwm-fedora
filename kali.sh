@@ -50,7 +50,7 @@ echo ""
 echo -e "${White} [${Blue}i${White}] Step 9 installing missing dependencies"
 sleep 2
 echo ""
-sudo dnf install xsetroot eza feh rofi lxappearance nitrogen flameshot git net-tools xclip xdotool lsd -y
+sudo dnf install xsetroot eza feh ranger rofi lxappearance nitrogen flameshot git net-tools xclip xdotool lsd -y
 echo ""
 sudo dnf install scrub bat openvpn pulseaudio-utils lolcat -y
 echo ""
